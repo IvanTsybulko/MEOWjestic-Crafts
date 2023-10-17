@@ -10,10 +10,10 @@ toggleButton.addEventListener('click',() =>{
 function sendOrder(){
   Email.send({
   Host : "smtp.elasticemail.com",
-  Username : "gravityboy333pjs@gmail.com",
-  Password : "B61E6507E64DBE998075A60BE30256695BBC",
-  To : 'gravityboy33@gmail.com',
-  From : "gravityboy333pjs@gmail.com",
+  Username : "meow.jestic.crafts@gmail.com",
+  Password : "9C408D37CF68535F65599618E6B1583E0910",
+  To : 'meow.jestic.crafts@gmail.com',
+  From : "meow.jestic.crafts@gmail.com",
   Subject : `New Order From ${document.getElementById("name").value}` ,
   Body : `New Message!
   <br> Name: ${document.getElementById("name").value}
@@ -32,10 +32,10 @@ message => alert("Order Requested")
 function sendMessage(){
   Email.send({
   Host : "smtp.elasticemail.com",
-  Username : "gravityboy333pjs@gmail.com",
-  Password : "B61E6507E64DBE998075A60BE30256695BBC",
-  To : 'gravityboy33@gmail.com',
-  From : "gravityboy333pjs@gmail.com",
+  Username : "meow.jestic.crafts@gmail.com",
+  Password : "9C408D37CF68535F65599618E6B1583E0910",
+  To : 'meow.jestic.crafts@gmail.com',
+  From : "meow.jestic.crafts@gmail.com",
   Subject : `New Message From ${document.getElementById("name").value}` ,
   Body : `New Message!
   <br> Name: ${document.getElementById("name").value}
