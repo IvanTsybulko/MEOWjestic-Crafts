@@ -1,0 +1,167 @@
+/**
+* Everything
+**/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+/**
+* Container
+**/
+
+.container{
+  width: 100%;
+  height:auto;
+  background-color: #ffecd1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+/**
+* Navigation Bar
+**/
+
+.nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 30px;
+
+  background-color: #e2edff;
+  
+  box-shadow: 0px 4px 14px 3px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 10;
+}
+
+.nav h1{
+  color: #7b80ec;
+}
+
+.nav-links{
+  display: flex;
+  flex-direction: row;
+
+  width: 50%;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links a{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover, .bi-three-dots-vertical:hover{
+  color: #7b80ec;
+}
+
+.nav-links .active{
+  color: #7b80ec;
+}
+
+li{
+  list-style: none;
+}
+
+.cart{
+  position: relative;
+}
+
+.cart .cart-amount{
+  font-size: 16px;
+  background-color: #7b80ec;
+  color: white;
+
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.nav-links i, .bi-three-dots-vertical{
+  font-size: 30px;
+}
+
+.toggle-button{
+  display: none;
+  position: absolute;
+  right: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/**
+* Footer
+**/
+
+.footer-details{
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+
+  background-color: #e2edff;
+
+  padding: 20px;
+}
+
+footer{
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+
+  background-color: #e2edff;
+
+  padding: 20px;
+}
+
+footer p{
+  color: black;
+  padding-top: 60px;
+
+}
+
+footer a{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+footer a:hover{
+ color: #7b80ec;
+}
+
+footer h3{
+  color: #7b80ec;
+  font-size: 20px;
+
+  margin-bottom: 15px;
+}
+
+.follow-us{
+  display: flex;
+  flex-direction: column;
+}
+footer li{
+  padding: 5px;
+}

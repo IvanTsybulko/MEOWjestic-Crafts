@@ -1,0 +1,54 @@
+/**
+* IPad
+**/
+
+@media(max-width: 1000px){
+  .shop{
+  grid-template-columns: repeat(2,223px);
+  }
+
+  .toggle-button{
+    display: flex;
+
+  }
+  .nav-links{
+    display: none;
+  }
+
+  .nav{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-links{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li{
+    padding-top: 35px;
+  }
+
+  .show{
+    display: flex;
+  }
+}
+
+/**
+* IPhone
+**/
+
+@media(max-width: 500px){
+  .shop{
+  grid-template-columns: repeat(1,223px);
+  }
+
+  .footer-details{
+    flex-direction: column;
+  }
+
+  .footer-details div{
+    padding-bottom: 20px;
+  }
+}

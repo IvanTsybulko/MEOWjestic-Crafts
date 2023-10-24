@@ -32,20 +32,19 @@ function generateShop(){
 generateShop();
 
 let increment = (element) => {
-  let selectedItem = document.getElementById(element.id);
   
-  let search = basket.find((x)=> x.id === selectedItem.id);
+  let search = basket.find((x)=> x.id === element.id);
 
   if(search === undefined)
   {
     basket.push(
       {
-        id: selectedItem.id,
+        id: element.id,
         item: 1
       }
     );
 
-    search = basket.find((x)=> x.id === selectedItem.id);
+    search = basket.find((x)=> x.id === element.id);
   }
   else{
     search.item +=1;
@@ -55,9 +54,8 @@ let increment = (element) => {
 };
 
 let decrement = (element) => {
-  let selectedItem = document.getElementById(element.id);
   
-  let search = basket.find((x)=> x.id === selectedItem.id);
+  let search = basket.find((x)=> x.id === element.id);
 
   if(search != undefined && search.item > 0)
   {
