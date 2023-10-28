@@ -95,7 +95,11 @@
     margin: 0 5px 0 5px;
   }
 
-    .product-details{
+  .overall-details{
+    width: 200px;
+  }
+
+  .product-details{
     align-self: flex-start;
   }
 
