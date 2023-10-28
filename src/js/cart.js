@@ -3,7 +3,7 @@ let shoppingCartElement = document.getElementById('shopping-cart');
 
 let generateCartItems = () => {
   if(basket.length !== 0){
-    return (shoppingCartElement.innerHTML = basket.map((x)=>{
+    return (shoppingCartElement.innerHTML = basket.map((x)=>{ 
 
       let{id,item} = x;
       let search = shopItemsData.find((y)=>y.id === id) || [];
@@ -14,7 +14,7 @@ let generateCartItems = () => {
         <div class="name-price-x">
 
           <h4 class="name">${search.name}</h4>
-          <h4 class="price">${search.price}$</h4>
+          <h4 class="price">${search.price} lv.</h4>
           <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
 
         </div>
@@ -110,7 +110,7 @@ let totalAmount =()=>{
     }
 
     labelElement.innerHTML = `
-    <h1 class="total">Total: ${sum}$</h1>
+    <h1 class="total">Total: ${sum} lv.</h1>
     <button>Go To Checkout</button>
     <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
     `

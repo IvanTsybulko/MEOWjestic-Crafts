@@ -8,6 +8,8 @@ toggleButton.addEventListener('click',() =>{
 
 let basket = JSON.parse(localStorage.getItem("cart-data")) || [];
 
+let singleProduct = JSON.parse(localStorage.getItem("s-product")) || null;
+
 let calculation = () => {
   let cartAmountElement = document.getElementById("cart-amount");
 

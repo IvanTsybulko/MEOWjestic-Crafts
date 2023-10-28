@@ -9,7 +9,7 @@ function generateShop(){
 
     shopElement.innerHTML += `
     <div id="product-id-${element.id}" class="item">
-      <img width="220" height="260" src="${element.img}" alt="">
+      <a onclick = "setSingleProduct(${element.id})" href = "single-product.html"> <img width="220" height="260" src="${element.img}" alt=""> </a>
 
       <div class="details">
         <h3>${element.name}</h3>
@@ -76,3 +76,25 @@ let update = (id,quantity) => {
 
   localStorage.setItem("cart-data", JSON.stringify(basket));
 };
+
+//sets the given product in thelocal storage
+function setSingleProduct(element){
+  let search = shopItemsData.find((x)=> x.id === element.id);
+
+  console.log(search.img2);
+
+  singleProduct = {
+    id: search.id,
+    name: search.name,
+    price: search.price,
+    desc: search.desc, 
+    img: search.img, 
+    img2: search.img2,
+    img3: search.img3,
+    img4: search.img4
+  };
+
+  console.log(singleProduct.img2);
+
+  localStorage.setItem("s-product", JSON.stringify(singleProduct));
+}
