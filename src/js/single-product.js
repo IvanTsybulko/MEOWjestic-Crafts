@@ -6,10 +6,10 @@ function generateSingleProduct(){
     <div id="main-img" class="main-img"><img width = "400" src=${singleProduct.img} alt=""></div>
 
     <div class="secondary-imgs">
-      <img class="sec-img" width = "80" src=${singleProduct.img} alt="">
-      <img class="sec-img" width = "80" src=${singleProduct.img2} alt="">
-      <img class="sec-img" width = "80" src=${singleProduct.img3} alt="">
-      <img class="sec-img" width = "80" src=${singleProduct.img4} alt="">
+      <img class="sec-img" onmouseover="changePhoto(this.src)" width = "80" src=${singleProduct.img} alt="">
+      <img class="sec-img" onmouseover ="changePhoto(this.src)" width = "80" src=${singleProduct.img2} alt="">
+      <img class="sec-img" onmouseover ="changePhoto(this.src)" width = "80" src=${singleProduct.img3} alt="">
+      <img class="sec-img" onmouseover ="changePhoto(this.src)" width = "80" src=${singleProduct.img4} alt="">
     </div>
   </div>
   <div class="product-details">
@@ -38,3 +38,9 @@ function generateSingleProduct(){
 }
 
 generateSingleProduct();
+
+let changePhoto = (image) => {
+  let mainImgElement = document.getElementById('main-img');
+
+  mainImgElement.innerHTML = `<img width = "400" src=${image} alt=""></img>`
+};

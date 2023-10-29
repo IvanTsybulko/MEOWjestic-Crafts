@@ -10,14 +10,14 @@ let shopItemsData = [
     img4: ""
   },
   {
-    id: "bat",
-    name: "Bat",
-    price: "40",
+    id: "pig",
+    name: "Pig",
+    price: "50",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-    img: "img/products/bat.jpg",
-    img2: "",
-    img3: "",
-    img4: ""
+    img: "img/products/pig1.jpg",
+    img2: "img/products/pig2.jpg",
+    img3: "img/products/pig3.jpg",
+    img4: "img/products/pig4.jpg"
   },
   {
     id: "bunny",
