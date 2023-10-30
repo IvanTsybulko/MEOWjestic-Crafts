@@ -3,7 +3,7 @@ let shoppingCartElement = document.getElementById('shopping-cart');
 
 let generateCartItems = () => {
   if(basket.length !== 0){
-    return (shoppingCartElement.innerHTML = basket.map((x)=>{
+    return (shoppingCartElement.innerHTML = basket.map((x)=>{ 
 
       let{id,item} = x;
       let search = shopItemsData.find((y)=>y.id === id) || [];
@@ -14,7 +14,7 @@ let generateCartItems = () => {
         <div class="name-price-x">
 
           <h4 class="name">${search.name}</h4>
-          <h4 class="price">${search.price}$</h4>
+          <h4 class="price">${search.price} лв.</h4>
           <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
 
         </div>
@@ -24,7 +24,7 @@ let generateCartItems = () => {
             <i onclick="increment(${id})" class="bi bi-plus-circle"></i>
         </div>
 
-        <h3>Total <br> ${item * search.price} lv.</h3>
+        <h3>Total <br> ${item * search.price} лв.</h3>
       </div>
     </div>
       `
@@ -97,7 +97,7 @@ let removeItem =(element)=>{
 
   generateCartItems();
 }
-
+ 
 let totalAmount =()=>{
   if(basket.length !== 0){
     let sum = 0;
@@ -110,7 +110,7 @@ let totalAmount =()=>{
     }
 
     labelElement.innerHTML = `
-    <h1 class="total">Total: ${sum}$</h1>
+    <h1 class="total">Total: ${sum} лв.</h1>
     <button>Go To Checkout</button>
     <button class="clear-cart" onclick="clearCart()">Clear Cart</button>
     `
