@@ -9,13 +9,13 @@ function generateShop(){
 
     shopElement.innerHTML += `
     <div id="product-id-${element.id}" class="item">
-      <a onclick = "setSingleProduct(${element.id})" href = "single-product.html"> <img width="220" height="260" src="${element.img}" alt=""> </a>
+      <a onclick = "setSingleProduct(${element.id})" href = "single-product.html"> <img width="220" height="" src="${element.img}" alt=""> </a>
 
       <div class="details">
         <h3>${element.name}</h3>
         <p>${element.desc}</p>
         <div class="price-quantity">
-          <h2>${element.price} lv.</h2>
+          <h2>${element.price} лв.</h2>
 
           <div class="buttons">
             <i onclick="decrement(${element.id})" class="bi bi-dash-circle"></i>

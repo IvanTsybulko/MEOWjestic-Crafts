@@ -15,12 +15,12 @@ function generateSingleProduct(){
   <div class="product-details">
     <div class="overall-details">
       <h3 class="name">${singleProduct.name}</h3>
-    <p class="price">${singleProduct.price} lv.</p>
+    <p><span class="price">${singleProduct.price} lv.</span></p>
     <p class="details">${singleProduct.desc}</p>
     </div>
 
     <div class="order-details">
-      <span>Color: </span>
+      <span>Colour: </span>
       <select class="color" name="color" id="color">
         <option value="red">Red</option>
         <option value="blue">Blue</option>
@@ -29,7 +29,7 @@ function generateSingleProduct(){
       </select>
 
     <span>Quantity: </span>
-    <input class="quantity" type="number">
+    <input class="quantity" type="number" min = "1" max = "100" placeholder = "1">
 
     <button>Add to cart</button>
     </div>
