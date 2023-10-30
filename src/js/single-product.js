@@ -79,5 +79,7 @@ function addToCart()
     }
 
     update(singleProduct.id,search.item);
+
+    location.reload();
   }
 }
