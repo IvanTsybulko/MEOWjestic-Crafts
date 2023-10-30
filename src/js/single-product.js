@@ -17,7 +17,7 @@ function generateSingleProduct(){
   <div class="product-details">
     <div class="overall-details">
       <h3 class="name">${singleProduct.name}</h3>
-    <p><span class="price">${singleProduct.price} lv.</span></p>
+    <p><span class="price">${singleProduct.price} лв.</span></p>
     <p class="details">${singleProduct.desc}</p>
     </div>
 
