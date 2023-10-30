@@ -1,4 +1,4 @@
-/* Navigation bar*/
+/* Navigation bar*/ 
 let toggleButton = document.getElementById('toggle-button');
 let navLinks = document.getElementById('nav-links');
 

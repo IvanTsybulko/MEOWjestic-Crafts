@@ -1,5 +1,7 @@
 let sProdElement = document.getElementById('s-prod');
 
+
+/* Generates the single product Page*/
 function generateSingleProduct(){
   sProdElement.innerHTML = `
   <div class="product-img">
@@ -29,9 +31,9 @@ function generateSingleProduct(){
       </select>
 
     <span>Quantity: </span>
-    <input class="quantity" type="number" min = "1" max = "100" placeholder = "1">
+    <input id="quantity" class="quantity" type="number" min = "1" max = "100" placeholder = "1">
 
-    <button>Add to cart</button>
+    <button onclick="addToCart()">Add to cart</button>
     </div>
   </div> 
     `;
@@ -44,3 +46,38 @@ let changePhoto = (image) => {
 
   mainImgElement.innerHTML = `<img width = "400" src=${image} alt=""></img>`
 };
+
+let update = (id,quantity) => {
+
+  calculation();
+
+  localStorage.setItem("cart-data", JSON.stringify(basket));
+};
+
+/* Adds the quantity of the selected item to the cart */
+function addToCart()
+{
+  let quantity = document.getElementById('quantity').value;
+
+  if(quantity === "")
+  {
+    quantity = '1';
+  }
+
+  if(parseInt(quantity) < 0){
+    alert("Quantity must be positive!");
+  }
+  else{
+    let search = basket.find((x) => x.id === singleProduct.id);
+
+    if(search === undefined){
+      basket.push({id:singleProduct.id, item: parseInt(quantity)});
+      search = basket.find((x) => x.id === singleProduct.id);
+    }
+    else{
+      search.item += parseInt(quantity);
+    }
+
+    update(singleProduct.id,search.item);
+  }
+}

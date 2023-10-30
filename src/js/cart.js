@@ -97,7 +97,7 @@ let removeItem =(element)=>{
 
   generateCartItems();
 }
-
+ 
 let totalAmount =()=>{
   if(basket.length !== 0){
     let sum = 0;
